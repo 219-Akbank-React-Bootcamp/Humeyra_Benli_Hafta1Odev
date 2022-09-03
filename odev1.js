@@ -11,5 +11,11 @@
 
 const array = ["Patika","219","Akbank","React","Bootcamp"]
 
+Array.prototype.includesCi = function (search) {
+    return this.some((item) => {
+      return item.toLowerCase() === search.toLowerCase();
+    });
+  };
+
 console.log(array.includesCi("patika")===true ? "Beklendiği gibi" : "Beklendiği gibi değil")
 console.log(array.includesCi("kırmızı")===false ? "Beklendiği gibi" : "Beklendiği gibi değil")
